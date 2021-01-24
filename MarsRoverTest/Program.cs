@@ -18,12 +18,12 @@ namespace MarsRoverTest
             // how many rovers there are, but for now we will assume only two.
             int numRovers = 2;
 
-            // Parse north eastern most coordinate
+            // Parse north-eastern most coordinate
             string dimensionString = Console.ReadLine();
             Coordinate limits;
             try
             {
-                limits = new Coordinate(dimensionString.Trim());
+                limits = new Coordinate(dimensionString.Trim().ToUpper());
             }
             catch (InvalidOperationException e)
             {
@@ -40,7 +40,7 @@ namespace MarsRoverTest
                 Coordinate startCoordinate;
                 try
                 {
-                    startCoordinate = new Coordinate(startCoordString.Trim());
+                    startCoordinate = new Coordinate(startCoordString.Trim().ToUpper());
                 }
                 catch (InvalidOperationException e)
                 {
@@ -51,7 +51,7 @@ namespace MarsRoverTest
 
                 // Read movement instructions and create rover and add it to the list.
                 string instructions = Console.ReadLine();
-                Rover rover = new Rover(startCoordinate, instructions, limits);
+                Rover rover = new Rover(startCoordinate, instructions.ToUpper(), limits);
                 roverList.Add(rover);
             }
 

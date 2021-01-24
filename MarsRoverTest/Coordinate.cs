@@ -22,7 +22,7 @@ namespace MarsRoverTest
         /// Read x and y coordinates and cardinal direction from a string.
         /// 
         /// If the string does not include a cardinal direction, it will default to North.
-        /// This should only apply for reading the north eastern most coordinate, since
+        /// This should only apply for reading the north-eastern most coordinate, since
         /// the direction is irrelevant.
         /// </summary>
         /// <param name="coordinateString">String to be parsed.</param>
